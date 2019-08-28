@@ -1,3 +1,29 @@
-header
-    h1 Header
-    
+header.main-header
+    nav.nav
+        .nav__logo
+            .logo
+                .logo__image
+                    img(src="./img/logo.svg", alt="Consult Info Logo")
+        .nav__mobile-icon
+            .mobile-icon
+                .mobile-icon__line.mobile-icon__line-one
+                .mobile-icon__line.mobile-icon__line-two
+                .mobile-icon__line.mobile-icon__line-three
+        ul.main-menu
+            li.main-menu__item
+                a.main-menu__link(href="#purpose") Для кого
+            li.main-menu__item
+                a.main-menu__link(href="#benefit") Что мне это даст?
+            li.main-menu__item
+                a.main-menu__link(href="#workflow") Как это будет?
+            li.main-menu__item
+                a.main-menu__link(href="#comments") Отзывы
+        .nav__subscribe
+            p.more-places Осталось 
+                span.more-places__value 23 места
+            button.sign-up Записаться
+
+    .main-header__content
+        h1.main-header__title CRM-интенсив
+        h2.main-header__subtitle Бесплатный образовательный практикум
+        button.btn-base.btn-base--ghost Записаться
