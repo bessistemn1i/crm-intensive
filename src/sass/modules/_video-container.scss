@@ -1,0 +1,17 @@
+.video-container {
+    // positioning
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 100px);
+    transform: translateX(-462.5px);
+
+    // box model
+    width: 945px;
+    height: 510px;
+
+    // visual
+    background-image: url('./img/decor/laptop.svg');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

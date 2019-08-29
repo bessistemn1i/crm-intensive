@@ -1,0 +1,40 @@
+.main-menu {
+    // box model
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    // visual
+    list-style: none;
+}
+
+.main-menu__item {
+    // box model
+    margin-right: 10px;
+
+    &:last-child {
+        // box model
+        margin-right: 0;
+    }
+}
+
+.main-menu__link {
+    // box model
+    display: block;
+    padding: 5px 10px;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 16px;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+    transition: color 0.25s ease;
+
+    &:hover {
+        // typography
+        color: $yellow;
+    }
+}

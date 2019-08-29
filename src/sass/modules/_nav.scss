@@ -3,5 +3,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.nav__logo {
+    // box model
+    margin-right: 80px;
+}
+
+.nav__subscribe {
+    // box model
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    margin-left: auto;
+    
+    &:after {
+        content: url(./img/decor/ship.svg);
+
+        // positioning
+        transform: translateX(-13px);
+    }
 }

@@ -13,10 +13,6 @@ html {
     // typography
     font-size: $baseFontSize;
 
-    @include atMinMobile {
-        font-size: $fontForSmallMobile;
-    }
-
     // visual
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -28,7 +24,7 @@ body {
     margin: 0;
 
     // visual
-    background-color: $mainColor;
+    background-color: $white;
 }
 
 .overflow-wrap {
