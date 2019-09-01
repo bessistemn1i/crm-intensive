@@ -15,4 +15,22 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     cursor: pointer;
+
+    &--large {
+        // box model
+        padding: 12px 73px;
+
+        // typography
+        font-size: 16px;
+        line-height: 18px;
+
+        // visual
+        border-top-right-radius: 23px;
+        border-bottom-right-radius: 23px;
+    }
+
+    &--form-popup {
+        // box model
+        width: 100%;
+    }
 }

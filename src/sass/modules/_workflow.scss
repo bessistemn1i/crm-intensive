@@ -1,0 +1,161 @@
+.workflow {
+    // box model
+    padding: 50px 0;
+    padding-top: 70px;
+
+    // visual
+    background-image: url('./img/backgrounds/workflow-bg.svg');
+    background-size: cover;
+}
+
+.workflow__image-container {
+    // box model
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.workflow__mobile-container {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 366px;
+    height: 730px;
+
+    // visual
+    background-image: url('./img/decor/mobile-device.svg');
+    background-repeat: no-repeat;
+}
+
+.workflow__trigger {
+    // positioning
+    position: absolute;
+
+    // box model
+    width: 100%;
+    max-width: 375px;
+    padding: 37px 39px 38px 40px;
+
+    // visual
+    background-color: $white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.25s ease;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        // box model
+        display: block;
+        width:100%;
+        height: 100%;
+
+        // visual
+        background-color: transparent;
+        border: 4px solid #F5F6F7;
+        border-radius: 5px;
+        pointer-events: none;
+    }
+    &--top {
+        // positioning
+        top: 77px;
+    }
+
+    &--middle {
+        // positioning
+        top: 265px;
+    }
+
+    &--bottom {
+        // positioning
+        bottom: 75px;
+    }
+
+    &--less:nth-child(2n - 1) {
+        // positioning
+        left: calc(-100% - 20px);
+
+        @include atDesktopL {
+            left: calc(-100% - 50px);
+        }
+    }
+
+    &--less:nth-child(2n) {
+        // positioning
+        right: calc(-100% - 20px);
+
+        @include atDesktopL {
+            right: calc(-100% - 50px);
+        }
+    }
+
+    &--more:nth-child(2n - 1) {
+        // positioning
+        left: calc(-100% - 30px);
+
+        @include atDesktopL {
+            left: calc(-100% - 90px);
+        }
+    }
+
+    &--more:nth-child(2n) {
+        // positioning
+        right: calc(-100% - 30px);
+
+        @include atDesktopL {
+            right: calc(-100% - 90px);
+        }
+    }
+
+    &:hover,
+    &--active {
+        // visual
+        border: 1px solid $grape;
+        box-shadow: 0 0 20px rgba(#D2D2D2, 0.5);
+
+        &:after {
+            // visual
+            border: 4px solid transparent;
+        }
+    }
+}
+
+.workflow__trigger p {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $grey;
+}
+
+.workflow__mobile-image {
+    // positioning
+    position: absolute;
+    top: 97px;
+    left: 39px;
+
+    // box model
+    height: 515px;
+    width: 289px;
+
+    // visual
+    transition: opacity 0.25s ease;
+}
+
+.workflow__mobile-image img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 100%;
+}

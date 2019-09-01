@@ -16,7 +16,6 @@ class VideoToPlay {
         let media = video.querySelector('.main-header__video-media');
         let button = video.querySelector('.main-header__video-button');
         let id = this.parseMediaURL(media);
-
         video.addEventListener('click', () => {
             let iframe = this.createIframe(id);
             
@@ -29,7 +28,7 @@ class VideoToPlay {
     }
 
     parseMediaURL(media) {
-        let regexp = /\WON4qYmW4MQ\b/;
+        let regexp = /WON4qYmW4MQ\b/;
         let url = media.src;
         let match = url.match(regexp);
         return match[0];
@@ -41,6 +40,7 @@ class VideoToPlay {
         iframe.setAttribute('allow', 'autoplay');
         iframe.setAttribute('src', this.generateURL(id));
         iframe.classList.add('main-header__video-media');
+        iframe.style.opacity = '1';
         return iframe;
     }
 

@@ -1,0 +1,66 @@
+.benefits {
+    // box model
+    margin-top: -10px;
+    margin-bottom: 85px;
+}
+
+.benefits__content {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.benefits__switcher {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 440px;
+}
+
+.benefits__more-info {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 565px;
+    
+    &:before {
+        content: url('./img/icons/deco-line.svg');
+
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 150px;
+
+        // box model
+        display: block;
+    }
+}
+
+.benefits__more-info-text {
+    // box model
+    margin: 0;
+    margin-top: 75px;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $grey;
+    text-align: center;
+
+    // visual
+    transition: opacity 0.25s ease-in-out;
+}

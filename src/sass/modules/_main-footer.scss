@@ -1,0 +1,104 @@
+.main-footer {
+    // box model
+    width: 100%;
+    padding-top: 42px;
+    padding-bottom: 38px;
+
+    // visual
+    background-color: #F5F6F7;
+}
+
+.main-footer__container {
+    // box model
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1160px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main-footer__link {
+    // box model
+    display: block;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 16px;
+    line-height: 18px;
+    color: $grey;
+}
+
+.main__footer__policy-text {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey;
+}
+
+.main-footer__register-btn {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 7px 19px;
+    margin-right: 170px;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    // visual
+    border: 1px solid #0065A3;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.bitrix-logo {
+    // box model
+    display: inline-block;
+    width: 100px;
+    margin-left: 15px;
+}
+
+.main-footer__social {
+    // box model
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    // visual
+    list-style: none;
+}
+
+.main-footer__social-item {
+    // box model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin-left: 7px;
+
+    // visual
+    background-color: $white;
+
+    &:first-child {
+        // box model
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,44 @@
+.benefit {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 135px;
+    padding: 20px 17px 18px 17px;
+    
+    // visual
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+        box-shadow: 0 0 20px #F5F6F7;
+    }
+}
+
+.benefit__thumbnail {
+    // box model
+    margin-bottom: 10px;
+}
+
+.benefit__image {
+    // box model
+    display: block;
+    width: auto;
+    height: 30px;
+}
+
+.benefit__title {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $grey;
+    text-align: center;
+}

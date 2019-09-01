@@ -1,6 +1,9 @@
 // normalize
 @import "normalize.css/normalize.css";
 
+//tiny-slider
+@import "../../node_modules/tiny-slider/src/tiny-slider.scss";
+
 //fonts
 @import "fonts/fonts";
 
@@ -11,9 +14,25 @@
 
 //elements
 @import "modules/main-header";
+@import "modules/main-footer";
 @import "modules/nav";
 @import "modules/main-menu";
 @import "modules/more-places";
 @import "modules/sign-up";
 @import "modules/button";
 @import "modules/video-container";
+@import "modules/purpose-item";
+@import "modules/section-header";
+@import "modules/benefit";
+@import "modules/comment";
+@import "modules/countdown";
+@import "modules/popup-form";
+
+//sections
+@import "modules/promo";
+@import "modules/purpose";
+@import "modules/benefits";
+@import "modules/workflow";
+@import "modules/comments";
+@import "modules/about";
+@import "modules/counter";

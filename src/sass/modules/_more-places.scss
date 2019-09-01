@@ -15,9 +15,42 @@
     border-right: none;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+
+    &--large {
+        // box model
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        max-width: 230px;
+        padding: 7px 33px;
+
+        // visual
+        border-top-left-radius: 23px;
+        border-bottom-left-radius: 23px;
+    }
+
+    &--form-popup {
+        // box model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 230px;
+        margin: 0;
+    }
 }
 
 .more-places__value {
     // typography
     font-weight: 500;
+}
+
+.more-places__value-stress {
+    // box model
+    margin: 0 5px;
+    
+    // typography
+    font-size: 24px;
+    line-height: 28px;
 }
