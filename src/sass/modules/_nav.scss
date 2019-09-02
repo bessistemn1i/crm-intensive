@@ -8,8 +8,14 @@
 }
 
 .nav__logo {
-    // box model
-    margin-right: 80px;
+    @include atDesktopS {
+        margin-right: 20px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: 80px;
+    }
 }
 
 .nav__subscribe {

@@ -35,14 +35,24 @@
 
     // box model
     width: 100%;
-    max-width: 375px;
-    padding: 37px 39px 38px 40px;
+    max-width: 250px;
 
     // visual
     background-color: $white;
     border: 1px solid transparent;
     cursor: pointer;
     transition: border-color 0.25s ease;
+
+    @include atDesktopS {
+        // box model
+        padding: 20px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 375px;
+        padding: 37px 39px 38px 40px;
+    }
 
     &:after {
         content: "";
@@ -63,6 +73,7 @@
         border-radius: 5px;
         pointer-events: none;
     }
+
     &--top {
         // positioning
         top: 77px;
@@ -80,16 +91,27 @@
 
     &--less:nth-child(2n - 1) {
         // positioning
-        left: calc(-100% - 20px);
+        left: -260px;
+
+        @include atDesktopM {
+            // positioning
+            left: calc(-100% - 20px);
+        }
 
         @include atDesktopL {
+            // positioning
             left: calc(-100% - 50px);
         }
     }
 
     &--less:nth-child(2n) {
         // positioning
-        right: calc(-100% - 20px);
+        right: -260px;
+
+        @include atDesktopM {
+            // positioning
+            right: calc(-100% - 20px);
+        }
 
         @include atDesktopL {
             right: calc(-100% - 50px);
@@ -98,8 +120,12 @@
 
     &--more:nth-child(2n - 1) {
         // positioning
-        left: calc(-100% - 30px);
+        left: -280px;
 
+        @include atDesktopM {
+            // positioning
+            left: calc(-100% - 30px);
+        }
         @include atDesktopL {
             left: calc(-100% - 90px);
         }
@@ -107,7 +133,12 @@
 
     &--more:nth-child(2n) {
         // positioning
-        right: calc(-100% - 30px);
+        right: -280px;
+
+        @include atDesktopM {
+            // positioning
+            right: calc(-100% - 30px);
+        }
 
         @include atDesktopL {
             right: calc(-100% - 90px);

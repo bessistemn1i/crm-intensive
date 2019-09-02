@@ -6,6 +6,18 @@
 
     // visual
     background-color: #F5F6F7;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .main-footer__container {
