@@ -4,10 +4,16 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 280px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 23px;
+    padding: 0 20px;
+
+    @include atTablet {
+        // box model
+        max-width: 360px;
+    }
 }
 
 .countdown__number {
@@ -24,16 +30,25 @@
         content: ":";
         // positioning
         position: absolute;
-        right: -27px;
+        right: -15px;
         top: 0;
 
         // typography
         font-family: $baseFont;
-        font-size: 50px;
+        font-size: 24px;
         font-weight: 500;
-        line-height: 57px;
+        line-height: 28px;
         color: $grape;
 
+        @include atTablet {
+            // positioning
+            top: 0;
+            right: -20px;
+
+            // typography
+            font-size: 50px;
+            line-height: 57px;
+        }
     }
 
 
@@ -43,11 +58,17 @@
 
             // positioning
             position: absolute;
-            right: -21px;
-            top: 0;
+            right: -10px;
+            top: -10px;
 
             // box model
             display: block;
+
+            @include atTablet {
+                // positioning
+                top: 5px;
+                right: -15px;
+            }
         }
     }
 
@@ -61,10 +82,16 @@
 .countdown__time {
     // typography
     font-family: $baseFont;
-    font-size: 50px;
+    font-size: 24px;
     font-weight: 500;
-    line-height: 57px;
+    line-height: 28px;
     color: $white;
+
+    @include atTablet {
+        // typography
+        font-size: 50px;
+        line-height: 57px;
+    }
 }
 
 .countdown__text {

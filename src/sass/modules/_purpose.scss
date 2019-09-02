@@ -1,4 +1,6 @@
 .purpose {
+    // box model
+    padding: 0 20px;
 }
 
 .purpose__container {
@@ -7,7 +9,8 @@
 
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
@@ -36,5 +39,11 @@
         background-image: url('./img/backgrounds/purpose-bg.svg');
         background-repeat: no-repeat;
         background-position: 1px -4px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        align-items: initial;
     }
 }

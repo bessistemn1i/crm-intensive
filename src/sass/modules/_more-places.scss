@@ -26,8 +26,14 @@
         padding: 7px 33px;
 
         // visual
-        border-top-left-radius: 23px;
-        border-bottom-left-radius: 23px;
+        border: none;
+
+        @include atTablet {
+            // visual
+            border: 1px solid $yellow;
+            border-top-left-radius: 23px;
+            border-bottom-left-radius: 23px;
+        }
     }
 
     &--form-popup {

@@ -3,9 +3,17 @@
     width: 100%;
     padding-top: 42px;
     padding-bottom: 38px;
+    padding-right: 20px;
+    padding-left: 20px;
 
     // visual
     background-color: #F5F6F7;
+    
+    @include atTablet {
+        // box model
+        padding-right: 30px;
+        padding-left: 30px;
+    }
 
     @include atDesktopS {
         // box model
@@ -26,10 +34,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1160px;
     margin-right: auto;
     margin-left: auto;
+
+    @include atTablet {
+        // box model
+        flex-wrap: nowrap;
+    }
 }
 
 .main-footer__link {
@@ -43,6 +57,24 @@
     color: $grey;
 }
 
+.main-footer__policy,
+.main-footer__social {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 49%;
+    max-width: 49%;
+
+    @include atTablet {
+        // box model
+        flex-grow: initial;
+        flex-shrink: initial;
+        flex-basis: initial;
+        max-width: initial;
+        margin-bottom: 0;
+    }
+}
+
 .main__footer__policy-text {
     // box model
     margin: 0;
@@ -54,6 +86,32 @@
     color: $grey;
 }
 
+.main-footer__register {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    max-width: 100%;
+    order: -1;
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        flex-grow: initial;
+        flex-shrink: initial;
+        flex-basis: initial;
+        max-width: initial;
+        margin-bottom: initial;
+        padding: 0 15px;
+        order: 0;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 0;
+    }
+}
+
 .main-footer__register-btn {
     // box model
     display: flex;
@@ -63,7 +121,8 @@
     width: 100%;
     max-width: 280px;
     padding: 7px 19px;
-    margin-right: 170px;
+    margin-right: auto;
+    margin-left: auto;
 
     // typography
     font-family: $baseFont;
@@ -76,6 +135,11 @@
     border: 1px solid #0065A3;
     border-radius: 15px;
     cursor: pointer;
+
+    @include atDesktopS {
+        // box model
+        margin-right: 170px;
+    }
 }
 
 .bitrix-logo {
@@ -90,11 +154,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
 
     // visual
     list-style: none;
+
+    @include atTablet {
+        justify-content: initial;
+    }
 }
 
 .main-footer__social-item {

@@ -27,6 +27,14 @@
         // visual
         border-top-right-radius: 23px;
         border-bottom-right-radius: 23px;
+        border-top-left-radius: 23px;
+        border-bottom-left-radius: 23px;
+
+        @include atTablet {
+            // visual
+            border-top-left-radius: initial;
+            border-bottom-left-radius: initial;
+        }
     }
 
     &--form-popup {

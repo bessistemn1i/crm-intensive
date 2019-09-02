@@ -6,12 +6,20 @@
     flex-shrink: 1;
     flex-basis: 50%;
     max-width: 365px;
+    margin-right: 5px;
+    margin-left: 5px;
     padding: 40px;
     padding-bottom: 33px;
+    margin-bottom: 30px;
 
     // visual
     background-color: $white;
     box-shadow: 0 0 20px #D2D2D2;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .purpose-item__thumbnail {

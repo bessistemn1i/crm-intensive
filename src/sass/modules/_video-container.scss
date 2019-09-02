@@ -9,22 +9,26 @@
     width: 945px;
     height: 510px;
 
-    // visual
-    background-image: url('./img/decor/laptop.svg');
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include atDesktopS {
+        // visual
+        background-image: url('./img/decor/laptop.svg');
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 }
 
 .video-container__promo {
     // positioning
     position: absolute;
+    top: 45px;
+    left: 115px;
 
     // box model
-    display: none;
-    height: 180px;
+    display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 715px;
+    height: 411px;
     
     // visual
     background-color: rgba(58, 71, 91, 0.9);
@@ -33,19 +37,6 @@
         // box model
         width: 100%;
         height: 100%;
-    }
-
-    @include atDesktopS {
-        // positioning
-        position: absolute;
-        top: 45px;
-        left: 115px;
-
-        // box model
-        display: block;
-        width: 100%;
-        max-width: 715px;
-        height: 411px;
     }
 }
 
