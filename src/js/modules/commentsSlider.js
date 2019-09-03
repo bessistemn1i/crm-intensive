@@ -10,12 +10,18 @@ class CommentsSlider {
         const commentSlider = new tns({
             loop:true,
             container: this.slider,
-            items: 3,
+            items: 1,
             autoplay: false,
             controls: true,
+            navPosition: 'bottom',
             controlsContainer: '.comments__nav',
             navContainer: '.comments__dots',
-            gutter: 20
+            gutter: 20,
+            responsive: {
+                1000: {
+                    items: 3
+                  }
+            }
         })
     }
 }

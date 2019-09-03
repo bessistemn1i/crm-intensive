@@ -4,4 +4,10 @@
 
     // box model
     height: 285px;
+    margin-bottom: 40px;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }

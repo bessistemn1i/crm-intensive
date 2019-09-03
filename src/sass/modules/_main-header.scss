@@ -11,7 +11,7 @@
     background-position: center center;
     overflow: hidden;
 
-    @include atTablet {
+    @include atDesktopS {
         // box model
         min-height: 800px;
     }

@@ -30,6 +30,7 @@
     // box model
     width: 100%;
     max-width: 460px;
+    padding: 0 20px;
 }
 
 .popup-form__header {
@@ -219,8 +220,19 @@
 .popup-form__close {
     // positioning
     position: absolute;
-    top: 0;
-    right: calc(-100% + 110px);
+    top: -30px;
+    right: 20px;
+
+    @include atTablet {
+        // positioning
+        top: 0;
+        right: -50px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        right: calc(-100% + 110px);
+    }
 
     // visual
     cursor: pointer;

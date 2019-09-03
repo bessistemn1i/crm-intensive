@@ -28,6 +28,9 @@
 }
 
 .benefits__more-info {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: column;
@@ -36,15 +39,21 @@
     max-width: 565px;
     
     &:before {
-        content: url('./img/icons/deco-line.svg');
+        content: "";
 
         // positioning
         position: absolute;
         left: 0;
-        top: 150px;
+        top: 30px;
 
         // box model
         display: block;
+        height: 10px;
+        width: 100%;
+
+        // visual
+        background-image: url('./img/icons/deco-line.svg');
+        background-position: center;
     }
 }
 

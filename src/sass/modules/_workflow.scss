@@ -28,11 +28,11 @@
     // positioning
     position: relative;
 
-    // box model
-    width: 366px;
-    height: 730px;
-
     @include atDesktopS {
+        // box model
+        width: 366px;
+        height: 730px;
+
         // visual
         background-image: url('./img/decor/mobile-device.svg');
         background-repeat: no-repeat;
@@ -62,12 +62,18 @@
     cursor: pointer;
     transition: border-color 0.25s ease;
 
+    @include atTablet {
+        // box model
+        max-width: 450px;
+    }
+
     @include atDesktopS {
         // positioning
         position: absolute;
 
         // box model
         padding: 20px;
+        max-width: 250px;
 
         &--top {
             // positioning
@@ -214,21 +220,60 @@
 
 .workflow__mobile-image {
     // positioning
-    position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 
     // box model
-    height: 515px;
-    width: 289px;
+    padding: 60px 20px 20px 20px;
 
     // visual
+    background-color: #4C3B7B;
     transition: opacity 0.25s ease;
+    opacity: 0;
+
+
+    &--active {
+        // positioning
+        position: sticky;
+
+        // box model
+        height: 515px;
+        width: 289px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
     @include atDesktopS {
         // positioning
+        position: absolute;
         top: 97px;
         left: 39px;
+        z-index: initial;
+
+        // box model
+        padding: initial;
+
+        // visual
+        background-color: initial;
+        opacity: 1;
+    }
+}
+
+.workflow__mobile-close {
+    // positioning
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    // visual
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @include atDesktopS {
+        // box model
+        display: none;
     }
 }
 

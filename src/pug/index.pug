@@ -66,8 +66,10 @@ html(lang="en")
 
                 .workflow__image-container
                     .workflow__mobile-container
-                        .workflow__mobile-image
+                        .workflow__mobile-image.visually-hidden
                             img.workflow__mobile-img(src="./img/workflow/watsup.jpg", alt="Практические задания")
+                            button.workflow__mobile-close
+                                img(src="./img/icons/close-screen-icon.svg", alt="Закрыть")
                         .workflow__triggers
                             .workflow__trigger.workflow__trigger--active.workflow__trigger--less.workflow__trigger--top(data-img="Практические-задания")
                                 p 1 раз в неделю вы получаете практическое задание и видео-урок по теме задания в чате WhatsApp
@@ -145,6 +147,8 @@ html(lang="en")
                         button.comments__nav-btn.comments__nav-btn--next
                             img.comments__nav-img(src="./img/icons/shevron-next.svg")
                 ul.comments__dots
+                    li.comment__dots-item
+                    li.comment__dots-item
                     li.comment__dots-item
                     li.comment__dots-item
         

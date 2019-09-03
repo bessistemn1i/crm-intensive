@@ -3,6 +3,7 @@ class ImageSwitcher {
         this.imageContainer = document.querySelector('.workflow__mobile-img');
         this.imageC = document.querySelector('.workflow__mobile-image');
         this.triggers = [...document.querySelectorAll('.workflow__trigger')];
+        this.closerPopup = this.imageC.querySelector('.workflow__mobile-close');
         this.imageAddresses = {
             'Авторам-курсов': './img/workflow/authors.jpg',
             'Тематические-видеоуроки': './img/workflow/lessons.jpg',
@@ -12,6 +13,35 @@ class ImageSwitcher {
             'Чат': './img/workflow/blank.jpg'
         }
         this.addEvents();
+    }
+
+    debounceOnResize(func) {
+        let timer;
+        return function (event) {
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, 250, event);
+        };
+    };
+
+    closingPopup() {
+        if(this.closerPopup) {
+            this.imageC.classList.remove('workflow__mobile-image--active');
+            this.imageC.classList.add('visually-hidden');
+        }
+    }
+
+    checkActiveClass() {
+        if(window.innerWidth >= 1000) {
+            this.imageC.classList.remove('visually-hidden');
+            this.imageC.classList.add('workflow__mobile-image--active');
+            return this.mainHeaderHeight;
+        }
+        else {
+            this.imageC.classList.remove('workflow__mobile-image--active');
+            this.imageC.classList.add('visually-hidden');
+        }
+
+        return;
     }
 
     switchImage(el) {
@@ -24,13 +54,19 @@ class ImageSwitcher {
         this.imageContainer.alt = attr;
 
         setTimeout(() => {
+            this.imageC.classList.remove('visually-hidden');
+            this.imageC.classList.add('workflow__mobile-image--active');
             this.imageC.style.opacity = 1;
             this.imageContainer.style.opacity = 1;
         }, 250);
     }
 
     addEvents() {
+        this.checkActiveClass();
         this.triggers.map((el) => el.addEventListener('click', () => this.switchImage(el)));
+        this.closerPopup.addEventListener('click', () => this.closingPopup());
+
+        window.addEventListener('resize', () => this.debounceOnResize(this.checkActiveClass()));
     }
 }
 
