@@ -1,7 +1,7 @@
 .main-header {
     // box model
     width: 100%;
-    min-height: 800px;
+    min-height: 350px;
     margin-right: auto;
     margin-left: auto;
 
@@ -11,6 +11,10 @@
     background-position: center center;
     overflow: hidden;
 
+    @include atTablet {
+        // box model
+        min-height: 800px;
+    }
     @include atDesktopS {
         // box model
         padding-left: 20px;
@@ -47,13 +51,18 @@
 }
 
 .main-header__content {
-    // positioning
-    position: relative;
-    
     // box model
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: none;
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+        
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .main-header__title {
@@ -134,6 +143,26 @@
     // visual
     border: none;
     opacity: 0.1;
+}
+
+.main-header__video-link {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    @include atDesktopS {
+        // positioning
+        position: initial;
+
+        // box model
+        display: initial;
+        height: initial;
+        width: initial;
+    }
 }
 
 .video-container__promo:hover 

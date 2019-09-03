@@ -2,10 +2,18 @@
     // box model
     padding: 50px 0;
     padding-top: 70px;
+    padding-right: 20px;
+    padding-left: 20px;
 
     // visual
     background-image: url('./img/backgrounds/workflow-bg.svg');
     background-size: cover;
+
+    @include atDesktopS {
+        // box model
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .workflow__image-container {
@@ -24,18 +32,29 @@
     width: 366px;
     height: 730px;
 
-    // visual
-    background-image: url('./img/decor/mobile-device.svg');
-    background-repeat: no-repeat;
+    @include atDesktopS {
+        // visual
+        background-image: url('./img/decor/mobile-device.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+.workflow__triggers {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .workflow__trigger {
     // positioning
-    position: absolute;
+    position: relative;
 
     // box model
     width: 100%;
     max-width: 250px;
+    margin-bottom: 30px;
+    padding: 37px 39px 38px 40px;
 
     // visual
     background-color: $white;
@@ -44,8 +63,82 @@
     transition: border-color 0.25s ease;
 
     @include atDesktopS {
+        // positioning
+        position: absolute;
+
         // box model
         padding: 20px;
+
+        &--top {
+            // positioning
+            top: 77px;
+        }
+    
+        &--middle {
+            // positioning
+            top: 265px;
+        }
+    
+        &--bottom {
+            // positioning
+            bottom: 75px;
+        }
+    
+        &--less:nth-child(2n - 1) {
+            // positioning
+            left: -260px;
+    
+            @include atDesktopM {
+                // positioning
+                left: calc(-100% - 20px);
+            }
+    
+            @include atDesktopL {
+                // positioning
+                left: calc(-100% - 50px);
+            }
+        }
+    
+        &--less:nth-child(2n) {
+            // positioning
+            right: -260px;
+    
+            @include atDesktopM {
+                // positioning
+                right: calc(-100% - 20px);
+            }
+    
+            @include atDesktopL {
+                right: calc(-100% - 50px);
+            }
+        }
+    
+        &--more:nth-child(2n - 1) {
+            // positioning
+            left: -280px;
+    
+            @include atDesktopM {
+                // positioning
+                left: calc(-100% - 30px);
+            }
+            @include atDesktopL {
+                left: calc(-100% - 90px);
+            }
+        }
+    
+        &--more:nth-child(2n) {
+            // positioning
+            right: -280px;
+    
+            @include atDesktopM {
+                // positioning
+                right: calc(-100% - 30px);
+            }
+    
+            @include atDesktopL {
+                right: calc(-100% - 90px);
+            }
+        }
     }
 
     @include atDesktopM {
@@ -74,77 +167,6 @@
         pointer-events: none;
     }
 
-    &--top {
-        // positioning
-        top: 77px;
-    }
-
-    &--middle {
-        // positioning
-        top: 265px;
-    }
-
-    &--bottom {
-        // positioning
-        bottom: 75px;
-    }
-
-    &--less:nth-child(2n - 1) {
-        // positioning
-        left: -260px;
-
-        @include atDesktopM {
-            // positioning
-            left: calc(-100% - 20px);
-        }
-
-        @include atDesktopL {
-            // positioning
-            left: calc(-100% - 50px);
-        }
-    }
-
-    &--less:nth-child(2n) {
-        // positioning
-        right: -260px;
-
-        @include atDesktopM {
-            // positioning
-            right: calc(-100% - 20px);
-        }
-
-        @include atDesktopL {
-            right: calc(-100% - 50px);
-        }
-    }
-
-    &--more:nth-child(2n - 1) {
-        // positioning
-        left: -280px;
-
-        @include atDesktopM {
-            // positioning
-            left: calc(-100% - 30px);
-        }
-        @include atDesktopL {
-            left: calc(-100% - 90px);
-        }
-    }
-
-    &--more:nth-child(2n) {
-        // positioning
-        right: -280px;
-
-        @include atDesktopM {
-            // positioning
-            right: calc(-100% - 30px);
-        }
-
-        @include atDesktopL {
-            right: calc(-100% - 90px);
-        }
-    }
-
     &:hover,
     &--active {
         // visual
@@ -155,6 +177,26 @@
             // visual
             border: 4px solid transparent;
         }
+    }
+}
+
+.workflow__trigger-more {
+    // box model
+    margin-top: 15px;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 13px;
+    font-weight: 500;
+    color: $grey;
+
+    // visual
+    background: none;
+    border: none;
+
+    @include atDesktopS {
+        // box model
+        display: none;
     }
 }
 
@@ -173,8 +215,8 @@
 .workflow__mobile-image {
     // positioning
     position: absolute;
-    top: 97px;
-    left: 39px;
+    top: 0;
+    left: 0;
 
     // box model
     height: 515px;
@@ -182,6 +224,12 @@
 
     // visual
     transition: opacity 0.25s ease;
+
+    @include atDesktopS {
+        // positioning
+        top: 97px;
+        left: 39px;
+    }
 }
 
 .workflow__mobile-image img {

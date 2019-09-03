@@ -5,6 +5,12 @@
     align-items: center;
     justify-content: flex-start;
     margin: 10px 0;
+    padding: 0 30px;
+
+    @include atDesktopS {
+        // box model
+        padding: 0;
+    }
 }
 
 .nav__logo {
@@ -25,11 +31,35 @@
     align-items: center;
     justify-content: space-between;
     margin-left: auto;
-    
-    &:after {
-        content: url(./img/decor/ship.svg);
 
-        // positioning
-        transform: translateX(-13px);
+    @include atTablet {
+        &:after {
+            content: url(./img/decor/ship.svg);
+    
+            // positioning
+            transform: translateX(-13px);
+        }
+    }
+}
+
+.nav__subscribe .more-places {
+    // box model
+    display: none;
+
+    @include atTablet {
+        // box model
+        display: inline-block;
+    }
+}
+
+.nav__subscribe .sign-up {
+    // visual
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+    @include atTablet {
+        // visual
+        border-top-left-radius: initial;
+        border-bottom-left-radius: initial;
     }
 }
