@@ -5,7 +5,7 @@
     // box model
     width: 100%;
     max-width: 365px;
-    padding: 50px 40px 40px 40px;
+    padding: 70px 40px 40px 40px;
     margin-right: auto;
     margin-left: auto;
     
@@ -116,9 +116,8 @@
 .slide-comment__more-text {
     // positioning
     position: absolute;
-    left: calc(100% + 20px);
-    bottom: -15px;
-    z-index: 2;
+    left: 15px;
+    bottom: 20px;
     
     // box model
     width: 195px;
@@ -133,9 +132,22 @@
     color: $white;
     
     // visual
-    background-image: url('./img/backgrounds/more-info-bg.svg');
-    background-repeat: no-repeat;
+    background-color: $grey;
 
+    &:after {
+        content:" ";
+        position: absolute;
+        bottom: -8px;
+        left: 25px;
+        margin-left: -5px;
+        width: 0;
+        border-top: 8px solid $grey;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+        font-size: 0;
+        line-height: 0;
+    }
+    
     &--hidden {
         // box model
         display: none;
