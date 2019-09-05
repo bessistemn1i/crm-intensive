@@ -7,7 +7,7 @@
     height: 100%;
     width: 100%;
     max-width: 900px;
-    margin-top: -150px;
+    transform: translateY(-150px);
     margin-right: auto;
     margin-left: auto;
 
@@ -17,7 +17,7 @@
         left: 50%;
         top: -300px;
         transform: translateX(-462.5px);
-
+        transform: translateY(initial);
         // box model
         width: 945px;
         height: 510px;
@@ -27,7 +27,6 @@
         align-items: initial;
         padding: initial;
         max-width: initial;
-        margin-top: initial;
         margin-right: initial;
         margin-left: initial;
 

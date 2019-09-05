@@ -43,11 +43,28 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .main-header__nav {
     // box model
     margin-bottom: 170px;
+
+    &--sticky {
+        // positioning
+        position: fixed;
+        top: 0;
+        z-index: 50;
+
+        // box model
+        max-width: 100%;
+        padding: 0 calc((100% - 1160px) / 2);
+        margin-right: initial;
+        margin-left: initial;
+
+        // visual
+        background-color: #4C3B7B;
+    }
 }
 
 .main-header__content {

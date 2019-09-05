@@ -45,3 +45,9 @@
         @content;
     }
 }
+
+@mixin minHeight {
+    @media (min-height: 300px) {
+        @content;
+    }
+}

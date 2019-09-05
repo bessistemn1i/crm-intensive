@@ -40,5 +40,9 @@
     &--form-popup {
         // box model
         width: 100%;
+
+        @include atMinMobile {
+            padding: 7px 25px;
+        }
     }
 }

@@ -16,6 +16,47 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 35px;
+
+    @include atDesktopS {
+        &:after,
+        &:before {
+            content: "";
+    
+            // positioning
+            position: absolute;
+            top: 65px;
+            z-index: 12;
+            
+            // box model
+            display: block;
+            height: 100%;
+            width: 100px;
+        }
+    
+        &:before {
+            // positioning
+            left: 0;
+    
+            // visual
+            background: linear-gradient(270deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.25) 28%, rgba(255,255,255,0.5) 56%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+        }
+    
+        &:after {
+            // positioning
+            right: 0;
+    
+            // visual
+             background: linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.25) 28%, rgba(255,255,255,0.5) 56%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+        }
+
+        @include atDesktopM {
+            &:before,
+            &:after {
+                // box model
+                width: 150px;
+            }
+        }
+    }
 }
 
 .comments__nav {

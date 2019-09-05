@@ -15,12 +15,17 @@ class CommentsSlider {
             navPosition: 'bottom',
             controlsContainer: '.comments__nav',
             //navContainer: '.comments__dots',
-            gutter: 20,
+            gutter: 30,
             speed: 400,
             responsive: {
                 1000: {
                     items: 3,
-                    slideBy: "page"
+                    slideBy: "page",
+                    edgePadding: 100,
+                    fixedWidth: 760
+                  },
+                  1200: {
+                      idgePadding: 170
                   }
             }
         })

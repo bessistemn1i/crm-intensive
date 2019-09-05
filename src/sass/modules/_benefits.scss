@@ -27,7 +27,11 @@
     max-width: 440px;
     
     // visual
-    overflow-x: scroll;
+    overflow-x: auto;
+
+    @include atTablet {
+        overflow: initial;
+    }
 }
 
 .benefits__more-info {

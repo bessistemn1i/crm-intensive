@@ -44,6 +44,11 @@
         width: 100%;
         max-width: 230px;
         margin: 0;
+
+        @include atMinMobile {
+            // box model
+            padding: 7px 10px;
+        }
     }
 }
 

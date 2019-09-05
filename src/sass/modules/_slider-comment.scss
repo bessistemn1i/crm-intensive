@@ -13,6 +13,12 @@
     border-radius: 5px;
     background-color: #F5F6F7;
     box-shadow: 0 0 20px rgba(#D2D2D2, 0.5);
+
+    @include atDesktopS {
+        // box model
+        max-width: 760px;
+        min-height: 360px;
+    }
 }
 
 .slide-comment__thumbnail {
@@ -30,6 +36,14 @@
     background-image: url('./img/backgrounds/thumbnail-bg.jpg');
     background-repeat: no-repeat;
     border-radius: 50%;
+
+    @include atDesktopS {
+        // positioning
+        left: 0;
+
+        // box model
+        margin-left: 40px;
+    }
 }
 
 .slide-comment__image {
@@ -50,6 +64,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+
+    // typography
+    text-align: center;
+
+    
+    @include atDesktopS {
+        // typography
+        align-items: flex-start;
+    }
 }
 
 .slide-comment__title {
@@ -61,7 +84,7 @@
     font-family: $baseFont;
     font-size: 16px;
     line-height: 18px;
-    font-weight: 500; 
+    font-weight: 500;
     color: $grey;
 }
 
@@ -132,18 +155,26 @@
     color: $white;
     
     // visual
-    background-color: $grey;
+    background-color: rgba($grey, 0.8);
+    border-radius: 7px;
+
+    @include atDesktopS {
+        // positioning
+        left: 130px;
+        bottom: -15px;
+    }
 
     &:after {
         content:" ";
         position: absolute;
-        bottom: -8px;
-        left: 25px;
-        margin-left: -5px;
+        bottom: 17px;
+        left: 0px;
+        margin-left: -8px;
         width: 0;
-        border-top: 8px solid $grey;
-        border-right: 8px solid transparent;
-        border-left: 8px solid transparent;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-right: 8px solid rgba($grey, 0.8);
+        border-bottom: 8px solid transparent;
         font-size: 0;
         line-height: 0;
     }
@@ -169,4 +200,5 @@
     font-weight: 400;
     line-height: 20px;
     color: $grey;
+    text-align: left;
 }

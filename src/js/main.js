@@ -6,6 +6,7 @@ import CountDown from './modules/countdown';
 import PopupOpener from './modules/popupOpener';
 import SmoothScroll from './modules/smoothScroll';
 import FormSender from './modules/formSender';
+import StickyHeader from './modules/stickyHeaer';
 
 const videoToPlay = new VideoToPlay();
 const tabSwitcher = new TabSwitcher();
@@ -15,3 +16,4 @@ const countdown = new CountDown();
 const popupOpener = new PopupOpener();
 const smoothScroll = new SmoothScroll();
 const formSender = new FormSender();
+const sticky = new StickyHeader();
