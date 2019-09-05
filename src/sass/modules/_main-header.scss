@@ -108,16 +108,18 @@
     // visual
     background-color: transparent;
     border: none;
+    outline: none;
+
+    @include atDesktopS {
+        // box model
+        height: 73px;
+        width: 108px;
+    }
 }
 
 .main-header__video-button-icon {
     // visual
     fill: #ffffff;
-}
-
-.main-header__video-button {
-    // visual
-    outline: none;
 }
 
 .video-container__promo--enabled {

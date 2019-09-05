@@ -8,18 +8,19 @@ class CommentsSlider {
 
     addEvents() {
         const commentSlider = new tns({
-            loop:true,
             container: this.slider,
             items: 1,
             autoplay: false,
             controls: true,
             navPosition: 'bottom',
             controlsContainer: '.comments__nav',
-            navContainer: '.comments__dots',
+            //navContainer: '.comments__dots',
             gutter: 20,
+            speed: 400,
             responsive: {
                 1000: {
-                    items: 3
+                    items: 3,
+                    slideBy: "page"
                   }
             }
         })

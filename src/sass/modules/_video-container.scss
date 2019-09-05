@@ -107,12 +107,6 @@
     // box model
     height: 100%;
     width: 100%;
-
-    @include atDesktopS {
-        // box model
-        height: 108.758px;
-        width: 78.149px;
-    }
 }
 
 .video-container__promo:hover .video-container__video-button-shape,
