@@ -36,6 +36,9 @@ body {
     // positioning
     position: relative;
 
+    // visual
+    background-color: #F5F6F7;
+    
     @include atDesktopS {
         // box model
         padding-left: 20px;

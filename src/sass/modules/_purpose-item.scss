@@ -1,4 +1,7 @@
 .purpose-item {
+    // positioning
+    z-index: 2;
+
     // box model
     display: flex;
     flex-direction: column;

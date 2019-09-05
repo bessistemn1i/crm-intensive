@@ -6,6 +6,7 @@
 .purpose__container {
     // positioning
     position: relative;
+    z-index: 2;
 
     // box model
     display: flex;
@@ -28,7 +29,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        z-index: -1;
+        z-index: 1;
 
         // box model
         display: block;
