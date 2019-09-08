@@ -7,7 +7,6 @@
     height: 100%;
     width: 100%;
     max-width: 900px;
-    transform: translateY(-150px);
     margin-right: auto;
     margin-left: auto;
 
@@ -17,7 +16,7 @@
         left: 50%;
         top: -300px;
         transform: translateX(-462.5px);
-        transform: translateY(initial);
+        
         // box model
         width: 945px;
         height: 510px;

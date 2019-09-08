@@ -15,6 +15,7 @@
         // box model
         min-height: 800px;
     }
+
     @include atDesktopS {
         // box model
         padding-left: 20px;
@@ -43,7 +44,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    padding: 0 20px;
+
+    // typography
+    text-align: center;
+
+    @include atDesktopS {
+        // box model
+        padding: initial;
+    }
 }
 
 .main-header__nav {
@@ -64,12 +73,22 @@
 
         // visual
         background-color: #4C3B7B;
+        box-shadow: 0 3px 6px rgba(#000000, 0.16);
+
+        .nav {
+            justify-content: flex-start;
+        }
+        
+        .nav__subscribe {
+            // box model
+            display: block;
+        }
     }
 }
 
 .main-header__content {
     // box model
-    display: none;
+    padding-bottom: 270px;
 
     @include atDesktopS {
         // positioning
@@ -79,6 +98,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-bottom: initial;
     }
 }
 
@@ -190,4 +210,32 @@
     // visual
     fill: #ff0000;
     fill-opacity: 1;
+}
+
+.main-header__video-button-text {
+    // positioning
+    position: absolute;
+    left: -30px;
+
+    // box model
+    width: 125px;
+    margin: 0;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white;
+
+    @include atDesktopS {
+        // position
+        left: -15px;
+
+        // box model
+        width: 143px;
+
+        // typography
+        font-size: 16px;
+        line-height: 18px;
+    }
 }

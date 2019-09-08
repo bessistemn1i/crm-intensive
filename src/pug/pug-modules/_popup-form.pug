@@ -1,5 +1,7 @@
 .popup-form.popup-form--hidden
     .popup-form__container
+        .popup-form__close
+            img(src="./img/icons/icon-close.svg", alt="Закрыть")
         header.popup-form__header
             h2.popup-form__title Анкета участника в CRM-интенсиве
             p.popup-form__subtitle Для того, чтобы сделать этот интенсив максимально полезным для вас, нам необходимо понимать цели и задачи внедрения, специфику вашего бизнеса.
@@ -19,13 +21,9 @@
             .form__input-container
                 input.popup-form__input(type="text", name="site",placeholder="Цели и задачи внедрения CRM")
             .form-popup__sign-up
-                p.more-places.more-places--form-popup Осталось 
-                    span.more-places__value <span class="more-places__value-stress">23</span> 
-                    |места
                 input(type="submit" value="Записаться").sign-up.sign-up--form-popup
 
             .form-popup__policy
                 input.form-popup__policy-checkbox#input-checkbox(type="checkbox" name="policy" required checked)
                 label(for="input-checkbox").form-popup__policy-label.form-popup__label Согласен с Политикой обработки персональных данных
-        .popup-form__close
-            img(src="./img/icons/icon-close.svg", alt="Закрыть")
+        

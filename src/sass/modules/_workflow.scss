@@ -2,13 +2,17 @@
     // box model
     padding: 50px 0;
     padding-top: 70px;
-    padding-right: 20px;
-    padding-left: 20px;
 
     // visual
     background-color: $white;
     background-image: url('./img/backgrounds/workflow-bg.svg');
     background-size: cover;
+
+    @include atTablet {
+        // box model
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 
     @include atDesktopS {
         // box model
@@ -29,6 +33,14 @@
     // positioning
     position: relative;
 
+    // box model
+    width: 100%;
+
+    @include atTablet {
+        // box model
+        width: auto;
+    }
+
     @include atDesktopS {
         // box model
         width: 366px;
@@ -45,6 +57,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include atTablet {
+        // box model
+        padding-right: auto;
+        padding-left: auto;
+    }
 }
 
 .workflow__trigger {
@@ -223,10 +243,10 @@
     // positioning
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 100;
 
     // box model
-    padding: 60px 20px 20px 20px;
+    padding: 70px 20px 20px 20px;
 
     // visual
     background-color: #4C3B7B;
@@ -236,13 +256,23 @@
 
     &--active {
         // positioning
-        position: sticky;
+        position: absolute;
+        left: 50%;
 
         // box model
         height: 515px;
-        width: 289px;
-        margin-right: auto;
-        margin-left: auto;
+        width: 100%;
+        max-width: 320px;
+        margin-left: -160px;
+        
+        @include atTablet {
+            // positioning
+            left: 50%;
+
+            // box model
+            width: 289px;
+            margin-left: -144.5px;
+        }
     }
 
     @include atDesktopS {
@@ -251,8 +281,10 @@
         top: 97px;
         left: 39px;
         z-index: initial;
-
+        
         // box model
+        margin-right: auto;
+        margin-left: auto;
         padding: initial;
 
         // visual
@@ -283,4 +315,23 @@
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.workflow__mobile-text {
+    // positioning
+    position: absolute;
+    top: 22px;
+
+    // box model
+    display: inline-block;
+    width: 100%;
+    max-width: 160px;
+    margin-bottom: 25px;
+
+    // typography
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $white;
 }

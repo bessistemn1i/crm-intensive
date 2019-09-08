@@ -18,11 +18,15 @@ class TabSwitcher {
     checkTab(el) {
         this.removeActiveClass();
         el.classList.add('benefit--active');
+        if(el.classList.contains('benefit--active')) {
+            this.tabs.insertBefore(el,)
+        }
         let id = el.id;
         this.resultText = this.benefits[`${id}`];
         this.resultContainer.style.opacity = 0;
         this.resultC.style.opacity = 0;
         this.resultContainer.textContent = this.resultText;
+        
         setTimeout(() => {
             this.resultC.style.opacity = 1;
             this.resultContainer.style.opacity = 1;

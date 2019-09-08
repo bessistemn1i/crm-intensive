@@ -1,12 +1,16 @@
 .promo {
     // positioning
     position: relative;
+    transform: translateY(-150px);
 
     // box model
     height: 285px;
     margin-bottom: 40px;
-
+    
     @include atDesktopS {
+        // positioning
+        transform: none;
+        
         // box model
         margin-bottom: 0;
     }

@@ -22,7 +22,8 @@ class CommentsSlider {
                     items: 3,
                     slideBy: "page",
                     edgePadding: 100,
-                    fixedWidth: 760
+                    fixedWidth: 760,
+                    "center": true,
                   },
                   1200: {
                       idgePadding: 170

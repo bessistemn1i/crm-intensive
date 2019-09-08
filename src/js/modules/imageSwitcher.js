@@ -27,6 +27,9 @@ class ImageSwitcher {
         if(this.closerPopup) {
             this.imageC.classList.remove('workflow__mobile-image--active');
             this.imageC.classList.add('visually-hidden');
+            if(window.innerWidth < 1000) {
+                this.imageC.style.top = 0;
+            }
         }
     }
 
@@ -34,6 +37,7 @@ class ImageSwitcher {
         if(window.innerWidth >= 1000) {
             this.imageC.classList.remove('visually-hidden');
             this.imageC.classList.add('workflow__mobile-image--active');
+            this.imageC.style.top = '';
             return this.mainHeaderHeight;
         }
         else {
@@ -59,13 +63,18 @@ class ImageSwitcher {
             this.imageC.style.opacity = 1;
             this.imageContainer.style.opacity = 1;
         }, 250);
+
+        if(window.innerWidth <= 1000) {
+            const elHeight = el.offsetTop;
+            this.imageC.style.top = `${elHeight}px`;
+        }
     }
 
     addEvents() {
         this.checkActiveClass();
         this.triggers.map((el) => el.addEventListener('click', () => this.switchImage(el)));
-        this.closerPopup.addEventListener('click', () => this.closingPopup());
-
+        this.closerPopup.addEventListener('click', () => this.debounceOnResize(this.closingPopup()));
+        
         window.addEventListener('resize', () => this.debounceOnResize(this.checkActiveClass()));
     }
 }

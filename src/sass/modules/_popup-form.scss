@@ -33,21 +33,23 @@
 
 .popup-form__container {
     // positioning
-    position: relative;
+    position: absolute;
+    top: 20px;
 
     // box model
     width: 100%;
-    max-width: 460px;
+    max-width: 465px;
     padding: 0 20px;
 
-    @include atMinMobile {
-        // box model
-        margin-top: 300px;
+    @include atDesktopM {
+        // positioning
+        position: relative;
     }
 }
 
 .popup-form__header {
     // box model
+    margin-top: 20px;
     margin-bottom: 20px;
 
     // typography
@@ -134,15 +136,18 @@
       flex-direction: row;
       justify-content: space-between;
       margin-top: 40px;
-      margin-bottom: 45px;
+      margin-bottom: 25px;
   }
 
   .form-popup__policy {
       // positioning
       position: relative;
 
+      // box model
+      padding-bottom: 40px;
+
       // typography
-      text-align: center;
+      text-align: left;
   }
 
 .form-popup__label {
@@ -239,9 +244,12 @@
 
 .popup-form__close {
     // positioning
-    position: absolute;
-    top: -30px;
-    right: 20px;
+    position: relative;
+
+    // box model
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
 
     @include atTablet {
         // positioning

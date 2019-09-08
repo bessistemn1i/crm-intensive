@@ -1,9 +1,12 @@
 .about {
     // box model
     width: 100%;
-    max-width: 1160px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 75px;
+
+    // visual
+    background-color: $white;
 }
 
 .about__content {
@@ -78,6 +81,10 @@
     text-transform: uppercase;
 
     &--gold {
+        // box model
+        margin: 0;
+        margin-top: -5px;
+        
         // typography
         color: #FFBB3B;
     }
