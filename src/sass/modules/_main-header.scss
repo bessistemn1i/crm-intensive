@@ -1,7 +1,10 @@
 .main-header {
+    // positioning
+    position: relative;
+
     // box model
     width: 100%;
-    min-height: 350px;
+    min-height: 630px;
     margin-right: auto;
     margin-left: auto;
 
@@ -56,9 +59,6 @@
 }
 
 .main-header__nav {
-    // box model
-    margin-bottom: 170px;
-
     &--sticky {
         // positioning
         position: fixed;
@@ -87,13 +87,16 @@
 }
 
 .main-header__content {
-    // box model
-    padding-bottom: 270px;
+    // positioning
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 231px;
+        
+        // box model
+        width: 100%;
 
     @include atDesktopS {
-        // positioning
-        position: relative;
-        
         // box model
         display: flex;
         flex-direction: column;

@@ -38,7 +38,7 @@ class SmoothScroll {
         const start = stamp;
         
         const startScrollOffset = window.pageYOffset;
-        const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+        const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top - 90;
         
         this.scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
         })

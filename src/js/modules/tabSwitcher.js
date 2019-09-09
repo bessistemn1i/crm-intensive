@@ -4,9 +4,9 @@ class TabSwitcher {
         this.resultC = document.querySelector('.benefits__more-info-container');
         this.resultContainer = document.querySelector('.benefits__more-info-text');
         this.benefits = {
-            "confidence": "Самостоятельная настройка CRM дает большое преимущество - все рычаги управления компанией и контроль продаж в ваших руках.",
-            "order": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores numquam nihil molestias.",
-            "economy": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cum ab assumenda expedita dolorem quam voluptas vel facilis iste officiis totam rem quas aut consequatur vitae ipsum velit, voluptatum magni repellendus vero!"
+            "confidence": "Уверенность в работе - самостоятельная настройка CRM дает большое преимущество - все рычаги управления компанией и контроль продаж в ваших руках.",
+            "order": "Порядок в продажах - результат успешного прохождения интенсива - рабочая CRM система, в которой Вы больше не теряете клиентов и видите точки роста.",
+            "economy": "Экономия времени и денег - бесплатное внедрение своими руками по шагам под нашим чутким руководством сбережет ваши главные ресурсы."
         }
         this.resultText;
         this.addEvents();
@@ -18,9 +18,6 @@ class TabSwitcher {
     checkTab(el) {
         this.removeActiveClass();
         el.classList.add('benefit--active');
-        if(el.classList.contains('benefit--active')) {
-            this.tabs.insertBefore(el,)
-        }
         let id = el.id;
         this.resultText = this.benefits[`${id}`];
         this.resultContainer.style.opacity = 0;

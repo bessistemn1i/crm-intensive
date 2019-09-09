@@ -334,4 +334,9 @@
     font-weight: 400;
     line-height: 16px;
     color: $white;
+
+    @include atDesktopS {
+        // box model
+        display: none;
+    }
 }
