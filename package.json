@@ -38,7 +38,7 @@
         "webpack-stream": "^5.2.1"
     },
     "dependencies": {
-        "browserslist": "^4.6.2",
+        "browserslist": "^4.16.5",
         "normalize.css": "^8.0.1",
         "tiny-slider": "^2.9.2"
     }
